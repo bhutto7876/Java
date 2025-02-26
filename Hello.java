@@ -1,25 +1,32 @@
-  class Hello {
+class Hello {
 
+    public static void main(String[] args) {
 
-    public static Object main (String a[]) {  
-      String day = "Monday";
+        // #region simple array
+        // int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        // for (int i =0; i<a.length; i++) {
+        // System.out.println("The array element is : "+a[i]);
+        // }
 
-return  switch (day) {
-  case "Monday"-> "Week day";
-  case "Tuesday"-> "Week day";
-  case "Wednesday"->"Week day";
-  case "Thursday"->"Week day";
-  case "Friday"->"Week day";
-  case "Saturday"-> "Weekend";
-  case "Sunday"-> "Weekend";
-  default->"Unknown";
-};
-  //  return switch (day) {
-  //     case 1-> System.out.println ("Hello  World");
-           
-  //       case 2-> System.out.println ("Hello  World");
-        
-  //     default-> System.out.println ("Hello  World");
-  //   }  
-    }  
-    } 
+        // for(int i : a) {
+        // System.out.println("The elemetn is"+i);
+        // }
+
+        // System.out.println(a[8]);
+
+        // #endregion simple array
+
+        // #region 2D array
+        int[][] myNumbers = new int [2][3];//{ { 1, 2, 3, 4 }, { 5, 6, 7 } };
+
+        for (int i = 0; i < myNumbers.length; i++) {
+            for (int j = 0; j < myNumbers[i].length; j++) {
+                System.out.println("The element is : " + myNumbers[i][j]);
+            }
+        }
+
+        // #endregion 2D array
+
+    }
+
+}
