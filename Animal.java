@@ -1,16 +1,23 @@
-final class Animal {
-  final void  makeSound() {
-        System.out.println("Animal constructor");
+abstract class Animal {
+    abstract void makeSound();
+    final void eat() {
+        System.out.println("Animal Eats");
     }
+
     public static void main(String[] args) {
         dog d = new dog();
-    }     
+        d.makeSound();
+        d.eat();
+    }
 }
 
-// the dog class can't subclass the Animal class because it is final
 class dog extends Animal {
-// cannot override final method from Animal
-    // void makeSound() {
-    //     System.out.println("Dog constructor");
+    void makeSound() {
+        System.out.println("Dog constructor");
+    }
+
+    // cannot override final method
+    // void eat() {
+    //     System.out.println("Dog Eats");
     // }
 }
