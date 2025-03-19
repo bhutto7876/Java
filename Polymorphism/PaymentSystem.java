@@ -10,25 +10,17 @@ class Payment {
 }
 
 class CreditCard extends Payment {
-    @Override
     void pay() {
         System.out.println("Payment made using Credit Card");
     }
 }
 
-class PayPal extends Payment {
-    @Override
-    void pay() {
-        System.out.println("Payment made using PayPal");
-    }
-}
+
 
 public class PaymentSystem {
     public static void main(String[] args) {
         Payment payment1 = new CreditCard();
-        Payment payment2 = new PayPal();
-
         payment1.pay();
-        payment2.pay();
+
     }
 }
