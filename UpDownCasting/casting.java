@@ -20,6 +20,15 @@ public class casting {
         
     Dog myDog = (Dog) myAnimal; // ❌ Incorrect downcasting
     myDog.bark(); // ❌ Runtime error (ClassCastException)
+
+    // check with instanceof operator
+    if (myAnimal instanceof Dog) {
+        // Dog myDog = (Dog) myAnimal;
+        myDog.bark(); // Safe ✅
+    } else {
+        System.out.println("Downcasting is not possible");
+    }
+    
     
     }
 
